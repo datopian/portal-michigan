@@ -11,7 +11,7 @@ export default function LighterThemeHeader() {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme } = useTheme();
-  const portalLogo = process?.env?.NEXT_PUBLIC_PORTAL_LOGO;
+  const portalLogo = "https://data.michigan.gov/api/assets/3679C2EB-7CA2-4552-9079-8ED161E06419?Brand_Block.png";
 
   useEffect(() => {
     const handleRouteChange = () => {
@@ -33,8 +33,14 @@ export default function LighterThemeHeader() {
         <div className="flex items-center gap-x-12">
           <span className="sr-only">Portal</span>
           {portalLogo ? (
-            <Link href="/">
+            <Link href="/" className="flex flex-row gap-5 items-center">
               <Image src={portalLogo} alt="logo" height={55} width={55} />
+              <div>
+              <h1 className="font-bold">
+              Michigan
+              </h1>
+              <p className="text-sm">Open Data Portal</p>
+              </div>
             </Link>
           ) : (
             <PortalDefaultLogo />

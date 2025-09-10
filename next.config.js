@@ -5,6 +5,7 @@ const domains = [
   "demo.dev.datopian.com",
   "api.dev.cloud.portaljs",
   "blob.datopian.com",
+  "data.michigan.gov",
 ];
 const nextConfig = {
   reactStrictMode: true,
